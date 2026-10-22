@@ -5,26 +5,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Formulário Místico</title>
+    <title>ConectaCarreiras | Candidatura</title>
 
     <style>
         /* =========================
            VARIÁVEIS DE CORES
         ========================== */
         :root {
-            --cor-principal: #6a0dad;
-            --cor-secundaria: #9c27b0;
-            --cor-destaque: #d8b4fe;
+            --cor-principal: #16324F;
+            --cor-secundaria: #087F8C;
+            --cor-destaque: #B8E3E5;
 
-            --cor-fundo: #f5efff;
-            --cor-card: #ffffff;
+            --cor-fundo: #F3F6FA;
+            --cor-card: #FFFFFF;
 
-            --cor-texto: #2d163b;
-            --cor-texto-claro: #ffffff;
+            --cor-texto: #243447;
+            --cor-texto-claro: #FFFFFF;
 
-            --cor-borda: #c4a7d7;
+            --cor-borda: #D5DEE8;
 
-            --sombra: 0 4px 15px rgba(80, 20, 120, 0.15);
+            --sombra: 0 8px 24px rgba(22, 50, 79, 0.10);
         }
 
         /* =========================
@@ -183,8 +183,10 @@
         }
 
         .opcoes input {
-            width: auto;
-        }
+    width: auto;
+    padding: 0;
+    margin-right: 5px;
+}
 
         /* Range */
 
@@ -267,9 +269,9 @@
     ========================== -->
 
     <header id="inicio">
-        <h1>🔮 Formulário Modelo</h1>
+        <h1>ConectaCarreiras</h1>
 
-        <p>Exemplo dos principais campos de formulário do HTML</p>
+        <p>Encontre sua próxima oportunidade profissional</p>
     </header>
 
 
@@ -280,9 +282,9 @@
     <nav>
         <a href="#inicio">Início</a>
 
-        <a href="#formulario">Formulário</a>
+        <a href="#formulario">Candidatura</a>
 
-        <a href="#contato">Contato</a>
+        <a href="#vagas">Vagas</a>
     </nav>
 
 
@@ -293,18 +295,20 @@
     <main>
 
         <section class="introducao">
-            <h2>Conhecendo os formulários HTML</h2>
+            <h2>Candidate-se a uma oportunidade</h2>
 
             <p>
-                Nesta página podemos testar diferentes tipos de
-                campos utilizados em formulários HTML.
+                Preencha seus dados profissionais e compartilhe
+                suas experiências conosco. As informações abaixo
+                ajudarão a conhecer melhor o seu perfil.
             </p>
+
         </section>
 
 
         <section id="formulario">
 
-            <form>
+            <form id="formCandidatura">
 
                 <!-- =====================
                      DADOS PESSOAIS
@@ -312,7 +316,7 @@
 
                 <fieldset>
 
-                    <legend>Dados pessoais</legend>
+                    <legend>01. Dados de contato</legend>
 
 
                     <!-- TEXT -->
@@ -320,86 +324,73 @@
                     <div class="campo">
 
                         <label for="nome">
-                            Nome:
+                            Nome completo 
                         </label>
 
                         <input
                             type="text"
                             id="nome"
                             name="nome"
-                            placeholder="Digite seu nome"
+                            placeholder="Digite seu nome completo"
+                            autocomplete="name"
+                            required
                         >
+
+                        <!-- EMAIL -->
 
                     </div>
 
+                        <div class="campo">
 
-                    <!-- NUMBER -->
+                          <label for="email">
+                              E-mail
+                          </label>
 
-                    <div class="campo">
-
-                        <label for="idade">
-                            Idade:
-                        </label>
-
-                        <input
-                            type="number"
-                            id="idade"
-                            name="idade"
-                            min="0"
-                            max="120"
-                        >
-
-                    </div>
-
-
-                    <!-- EMAIL -->
-
-                    <div class="campo">
-
-                        <label for="email">
-                            E-mail:
-                        </label>
-
-                        <input
+                          <input
                             type="email"
                             id="email"
                             name="email"
-                            placeholder="exemplo@email.com"
+                            placeholder="exemplo@gmail.com"
+                            autocomplete="email"
+                            required
                         >
 
-                    </div>
-
-
-                    <!-- PASSWORD -->
-
-                    <div class="campo">
-
-                        <label for="senha">
-                            Senha:
-                        </label>
-
-                        <input
-                            type="password"
-                            id="senha"
-                            name="senha"
-                        >
-
-                    </div>
-
+                        </div>
 
                     <!-- TEL -->
 
                     <div class="campo">
 
                         <label for="telefone">
-                            Telefone:
+                            Telefone / WhatsApp
                         </label>
 
                         <input
                             type="tel"
                             id="telefone"
                             name="telefone"
-                            placeholder="(00) 00000-0000"
+                            placeholder="(11) 99999-9999"
+                            autocomplete="tel"
+                            required
+                        >
+
+                    </div>
+
+
+                    <!-- TEXT -->
+
+                    <div class="campo">
+
+                        <label for="cidade">
+                            Cidade e estado
+                        </label>
+
+                        <input
+                            type="text"
+                            id="cidade"
+                            name="cidade"
+                            placeholder="Ex.: Cornélio Procópio - PR"
+                            required
                         >
 
                     </div>
@@ -409,111 +400,33 @@
 
                     <div class="campo">
 
-                        <label for="site">
-                            Site pessoal:
+                        <label for="linkedin">
+                            Perfil do LinkedIn
                         </label>
 
                         <input
                             type="url"
-                            id="site"
-                            name="site"
-                            placeholder="https://meusite.com"
+                            id="linkedin"
+                            name="linkedin"
+                            placeholder="https://www.linkedin.com/in/seu-perfil"
                         >
 
                     </div>
-
-                </fieldset>
-
-
-                <!-- =====================
-                     DATA E HORÁRIO
-                ====================== -->
-
-                <fieldset>
-
-                    <legend>Data e horário</legend>
 
 
                     <!-- DATE -->
 
                     <div class="campo">
 
-                        <label for="data">
-                            Data:
+                        <label for="nascimento">
+                            Data de nascimento
                         </label>
 
                         <input
                             type="date"
-                            id="data"
-                            name="data"
-                        >
-
-                    </div>
-
-
-                    <!-- TIME -->
-
-                    <div class="campo">
-
-                        <label for="horario">
-                            Horário:
-                        </label>
-
-                        <input
-                            type="time"
-                            id="horario"
-                            name="horario"
-                        >
-
-                    </div>
-
-
-                    <!-- DATETIME LOCAL -->
-
-                    <div class="campo">
-
-                        <label for="dataHorario">
-                            Data e horário:
-                        </label>
-
-                        <input
-                            type="datetime-local"
-                            id="dataHorario"
-                            name="dataHorario"
-                        >
-
-                    </div>
-
-
-                    <!-- MONTH -->
-
-                    <div class="campo">
-
-                        <label for="mes">
-                            Mês:
-                        </label>
-
-                        <input
-                            type="month"
-                            id="mes"
-                            name="mes"
-                        >
-
-                    </div>
-
-
-                    <!-- WEEK -->
-
-                    <div class="campo">
-
-                        <label for="semana">
-                            Semana:
-                        </label>
-
-                        <input
-                            type="week"
-                            id="semana"
-                            name="semana"
+                            id="nascimento"
+                            name="nascimento"
+                            required
                         >
 
                     </div>
@@ -522,251 +435,271 @@
 
 
                 <!-- =====================
-                     ESCOLHAS
+                     VAGA E EXPERIÊNCIA
                 ====================== -->
 
-                <fieldset>
+                <fieldset id="vagas">
 
-                    <legend>Escolhas</legend>
+                    <legend>02. Vaga e experiência profissional</legend>
 
 
-                    <!-- RADIO -->
+                    <!-- SELECTION -->
 
                     <div class="campo">
 
-                        <label>
-                            Turno:
+                        <label for="cargo">
+                            Cargo pretendido
                         </label>
+                        <select id="cargo" name="cargo" required>
+                          <option value="">Selecione uma opção</option>
 
-                        <div class="opcoes">
+                          <option value="desenvolvedor-frontend">
+                              Desenvolvedor(a) Front-end
+                          </option>
 
-                            <label>
-                                <input
-                                    type="radio"
-                                    name="turno"
-                                    value="manha"
-                                >
+                          <option value="desenvolvedor-backend">
+                              Desenvolvedor(a) Back-end
+                          </option>
 
-                                Manhã
-                            </label>
+                          <option value="desenvolvedor-fullstack">
+                              Desenvolvedor(a) Full Stack
+                          </option>
 
+                          <option value="designer">
+                              Designer
+                          </option>
 
-                            <label>
-                                <input
-                                    type="radio"
-                                    name="turno"
-                                    value="tarde"
-                                >
+                          <option value="analista">
+                              Analista de Sistemas
+                          </option>
 
-                                Tarde
-                            </label>
+                          <option value="suporte">
+                              Suporte Técnico
+                          </option>
 
-
-                            <label>
-                                <input
-                                    type="radio"
-                                    name="turno"
-                                    value="noite"
-                                >
-
-                                Noite
-                            </label>
-
-                        </div>
-
+                          <option value="outro">Outro</option>
+                        </select>
                     </div>
 
 
-                    <!-- CHECKBOX -->
+                    <!-- OPTION -->
 
                     <div class="campo">
 
-                        <label>
-                            Tecnologias que você conhece:
-                        </label>
-
-                        <div class="opcoes">
-
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    name="html"
-                                >
-
-                                HTML
-                            </label>
-
-
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    name="css"
-                                >
-
-                                CSS
-                            </label>
-
-
-                            <label>
-                                <input
-                                    type="checkbox"
-                                    name="javascript"
-                                >
-
-                                JavaScript
-                            </label>
-
-                        </div>
-
-                    </div>
-
-
-                    <!-- SELECT -->
-
-                    <div class="campo">
-
-                        <label for="curso">
-                            Escolha um curso:
+                        <label for="experiencia">
+                            Tempo de experiência
                         </label>
 
                         <select
-                            id="curso"
-                            name="curso"
+                          id="experiencia"
+                          name="experiencia"
+                          required
                         >
+                        <option value="">Selecione</option>
 
-                            <option value="">
-                                Selecione
-                            </option>
+                        <option value="sem-experiencia">
+                          Ainda não tenho experiência
+                        </option>
 
-                            <option value="ds">
-                                Desenvolvimento de Sistemas
-                            </option>
+                        <option value="menos-de-1">Menos de 1 ano</option>
 
-                            <option value="administracao">
-                                Administração
-                            </option>
+                        <option value="1-2">De 1 a 2 anos</option>
 
-                            <option value="informatica">
-                                Informática
-                            </option>
-
-                        </select>
-
-                    </div>
-
-                </fieldset>
-
-
-                <!-- =====================
-                     OUTROS CAMPOS
-                ====================== -->
-
-                <fieldset>
-
-                    <legend>Outros campos</legend>
-
-
-                    <!-- SEARCH -->
-
-                    <div class="campo">
-
-                        <label for="pesquisa">
-                            Campo de pesquisa:
-                        </label>
-
-                        <input
-                            type="search"
-                            id="pesquisa"
-                            name="pesquisa"
-                            placeholder="Pesquisar..."
-                        >
-
+                        <option value="3-5">De 3 a 5 anos</option>
+  
+                        <option value="mais-de-5">Mais de 5 anos</option>
+                      </select>
                     </div>
 
 
-                    <!-- FILE -->
+                    
+<div class="campo">
+    <label for="formacao">Escolaridade</label>
 
-                    <div class="campo">
+    <select id="formacao" name="formacao" required>
+        <option value="">Selecione</option>
+        <option value="medio">Ensino médio</option>
+        <option value="tecnico">Curso técnico</option>
+        <option value="graduacao">
+            Ensino superior em andamento
+        </option>
+        <option value="superior">
+            Ensino superior completo
+        </option>
+        <option value="pos">
+            Pós-graduação ou especialização
+        </option>
+    </select>
+</div>
 
-                        <label for="arquivo">
-                            Selecione um arquivo:
-                        </label>
-
-                        <input
-                            type="file"
-                            id="arquivo"
-                            name="arquivo"
-                        >
-
-                    </div>
-
-
-                    <!-- COLOR -->
-
-                    <div class="campo">
-
-                        <label for="cor">
-                            Escolha uma cor:
-                        </label>
-
-                        <input
-                            type="color"
-                            id="cor"
-                            name="cor"
-                            value="#6a0dad"
-                        >
-
-                    </div>
-
-
-                    <!-- RANGE -->
-
-                    <div class="campo">
-
-                        <label for="nivel">
-                            Nível de satisfação:
-                        </label>
-
-                        <input
-                            type="range"
-                            id="nivel"
-                            name="nivel"
-                            min="0"
-                            max="10"
-                            value="5"
-                        >
-
-                    </div>
 
 
                     <!-- TEXTAREA -->
 
                     <div class="campo">
 
-                        <label for="mensagem">
-                            Mensagem:
-                        </label>
-
-                        <textarea
-                            id="mensagem"
-                            name="mensagem"
-                            rows="5"
-                            placeholder="Digite uma mensagem..."
+                      <label for="competencias">
+                        Principais competências
+                      </label>
+                      <textarea
+                        id="competencias"
+                        name="competencias"
+                        rows="4"
+                        placeholder="Ex.: HTML, CSS, JavaScript, comunicação, trabalho em equipe..."
                         ></textarea>
-
-                    </div>
-
-
-                    <!-- HIDDEN -->
-
-                    <input
-                        type="hidden"
-                        name="codigo"
-                        value="FORM001"
-                    >
-
+                  </div>
                 </fieldset>
 
+
+                <!-- =====================
+                     CONDIÇÕES DA VAGA
+                ====================== -->
+
+                <fieldset>
+
+                    <legend>03. Condições da vaga</legend>
+
+                    <div class="campo">
+
+                    <label for="salario">
+                Pretensão salarial mensal (R$) 
+            </label>
+            <input
+                type="number"
+                id="salario"
+                name="salario"
+                min="0"
+                step="100"
+                placeholder="Ex.: 3500"
+                required
+            >
+        </div>
+          
+          <div class="campo">
+            <label>Modelo de trabalho </label>
+            <div class="opcoes">
+                <label>
+                    <input
+                        type="radio"
+                        name="modelo"
+                        value="presencial"
+                        required
+                    >
+                    Presencial
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="modelo"
+                        value="hibrido"
+                    >
+                    Híbrido
+                </label>
+
+                <label>
+                    <input
+                        type="radio"
+                        name="modelo"
+                        value="remoto"
+                    >
+                    Remoto
+                </label>
+            </div>
+        </div>
+
+        <div class="campo">
+            <label>Disponibilidade de horário </label>
+            <div class="opcoes">
+                <label>
+                    <input
+                        type="checkbox"
+                        name="disponibilidade[]"
+                        value="integral"
+                    >
+                    Período integral
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="disponibilidade[]"
+                        value="manha"
+                    >
+                    Manhã
+                </label>
+
+                <label>
+                    <input
+                        type="checkbox"
+                        name="disponibilidade[]"
+                        value="tarde"
+                    >
+                    Tarde
+                </label>
+                <label>
+                    <input
+                        type="checkbox"
+                        name="disponibilidade[]"
+                        value="noite"
+                    >
+                    Noite
+                </label>              
+            </div>
+            <small>Selecione pelo menos uma opção.</small>
+        </div>
+
+        <div class="campo">
+            <label for="inicioDisponibilidade">
+                Quando pode começar?
+            </label>
+            <input
+                type="date"
+                id="inicioDisponibilidade"
+                name="inicioDisponibilidade"
+            >
+        </div>
+    </fieldset>
+
+    <!-- CURRÍCULO E PORTFÓLIO -->
+    <fieldset>
+        <legend>04. Currículo e portfólio</legend>
+
+        <div class="campo">
+            <label for="curriculo">Currículo em PDF</label>
+            <input
+                type="file"
+                id="curriculo"
+                name="curriculo"
+                accept=".pdf,application/pdf"
+                required
+            >
+            <small>Envie seu currículo no formato PDF.</small>
+        </div>
+
+        <div class="campo">
+            <label for="portfolio">Link do portfólio</label>
+            <input
+                type="url"
+                id="portfolio"
+                name="portfolio"
+                placeholder="https://meuportfolio.com"
+            >
+        </div>
+
+        <div class="campo">
+            <label for="apresentacao">
+                Conte um pouco sobre você
+            </label>
+            <textarea
+                id="apresentacao"
+                name="apresentacao"
+                rows="5"
+                maxlength="1000"
+                placeholder="Apresente sua trajetória, seus objetivos e por que deseja essa oportunidade."
+            ></textarea>
+        </div>
+    </fieldset>
 
                 <!-- =====================
                      TERMOS
@@ -774,7 +707,7 @@
 
                 <fieldset>
 
-                    <legend>Confirmação</legend>
+                    <legend>05. Confirmação</legend>
 
                     <div class="opcoes">
 
@@ -782,11 +715,14 @@
 
                             <input
                                 type="checkbox"
-                                name="termos"
+                                id="consentimento"
+                                name="consentimento"
+                                value="sim"               
                                 required
                             >
 
-                            Aceito os termos de uso.
+                            Autorizo o uso dos meus dados para
+                            participar deste processo seletivo.
 
                         </label>
 
@@ -805,7 +741,7 @@
 
                     <input
                         type="submit"
-                        value="Enviar"
+                        value="Enviar candidatura"
                     >
 
 
@@ -813,17 +749,12 @@
 
                     <input
                         type="reset"
-                        value="Limpar"
+                        value="Limpar formulário"
                     >
 
 
                     <!-- BUTTON -->
 
-                    <input
-                        type="button"
-                        value="Clique aqui"
-                        onclick="mostrarMensagem()"
-                    >
 
                 </div>
 
@@ -841,13 +772,14 @@
     <footer id="contato">
 
         <p>
-            Exemplo de formulário HTML
+            <strong>ConectaCarreiras</strong>
         </p>
 
         <p>
-            Desenvolvido para fins educacionais
+            Conectando talentos a novas oportunidades.
         </p>
 
+        <p>Projeto acadêmico desenvolvido para fins educacionais.</p>
     </footer>
 
 
@@ -857,11 +789,24 @@
 
     <script>
 
-        function mostrarMensagem() {
+        const formulario = document.getElementById("formCandidatura");
 
-            alert("Você clicou no input do tipo button!");
+        formulario.addEventListener("submit", function(event) {
+        event.preventDefault();
 
+        const disponibilidade = formulario.querySelectorAll(
+            'input[name="disponibilidade[]"]:checked'
+        );
+
+        if (disponibilidade.length === 0) {
+            alert("Selecione pelo menos uma opção de disponibilidade.");
+            return;
         }
+
+        alert(
+            "Validação concluída!"
+        );
+    });
 
     </script>
 
